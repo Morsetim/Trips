@@ -15,19 +15,8 @@ export default function DatePickerDialog() {
   const popperRef = useRef(null);
   const buttonRef = useRef(null);
   const [popperElement, setPopperElement] = useState(null);
-  const { user, updateUser} = useContext(FlightContext)
+  // const { user, updateUser} = useContext(FlightContext)
 
-
-
-  const handleDepauture = (val) => {
-
-    updateUser((prev) => ({
-      ...prev, departure: val
-    }))
-  };
-
-  // console.log(inputValue, 'inputValue')
-  // console.log(selected, 'selected')
 
   const popper = usePopper(popperRef.current, popperElement, {
     placement: 'bottom-start'
@@ -56,7 +45,7 @@ export default function DatePickerDialog() {
     if (date) {
       const depDate = format(date, 'y-MM-dd')
       setInputValue(depDate);
-      handleDepauture(depDate)
+      // handleDepauture(depDate)
       closePopper();
     } else {
       setInputValue('');

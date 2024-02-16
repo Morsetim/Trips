@@ -97,7 +97,7 @@ const Trips = () => {
   const total = parseInt(newAmount) + 1000
 
 console.log(flightInfo, "flightInfo")
-console.log(availableFlight, "availableFlight")
+console.log(availableFlight, "availableFlight") 
 
   return (
     <>
